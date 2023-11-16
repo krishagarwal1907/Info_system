@@ -1,0 +1,16 @@
+.card_container{
+    min-height: 100vh;
+    background: url(); 
+}
+/* .card_container .card{
+    background: linear-gradient(rgb(183, 0, 255),rgba(255, 0, 200, 0.931));
+    
+} */
+.card .form-control{
+    background: transparent;
+
+}
+.card .form-control::placeholder{
+    color: grey;
+    
+}

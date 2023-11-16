@@ -1,0 +1,41 @@
+<%- include('layout/header') %>
+<br>
+<div class="container">
+    <div class="row d-flex justify-content-center align-items-center card_container">
+     <!-- md->medium,sm->small,lg->large,cl-1=8.33%width,col-12=100%  -->
+         <div class="col-md-14 col-lg-6">
+            <div class="card shadow">
+                <div class="card-header bg-secondary">
+                 <h3 class="text-center text-light">Edit User (<%= user.name %>)</h3>
+                </div>
+             <div class="card-body p-4">
+                 <form action="/update/<%= user._id %>" method="post" id="add-form" enctype="multipart/form-data">
+                 <div class="form-group mt-3">
+                     <label for="name" class="form-label">Name</label>
+                     <input type="text" id="title"  name="name" value="<%= user.name %>" class="form-control form-control-lg" placeholder="Enter Name" required/>
+                 </div>
+                 <div class="form-group mt-3">
+                    <label for="email" class="form-label">Email ID</label>
+                    <input type="email" id="title"  name="email" value="<%= user.email %>" class="form-control form-control-lg" placeholder="Enter valid email" required/>
+                </div>
+                <div class="form-group mt-3">
+                    <label for="phone" class="form-label">Phone</label>
+                    <input type="tel"  name="phone" value="<%= user.phone %>" class="form-control form-control-lg" placeholder="Enter Contact Number" required/>
+                </div>
+                 <div class="form-group mt-3">
+                     <label for="image" class="form-label">Select Image</label>
+                     <input type="file"  name="image" class="form-control form-control-lg" placeholder="Upload Your Image"/>
+                     <img src="/<%= user.image %>" width="100" class="img-thumbnail mt-1">
+                 </div>
+                    <input type="hidden" name="old_image" value="<%= user.image %>">
+                 <div class="form-group mt-3 text-center d-grid">
+                     <input type="submit"  name="submit" value="Update User" class="btn btn-secondary btn-lg"/>
+                 </div>
+                </form>
+             </div>
+         </div>
+         </div>
+    </div>
+ </div>
+ <br>
+<%- include('layout/footer') %>

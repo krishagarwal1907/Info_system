@@ -1,0 +1,37 @@
+<%- include('layout/header') %>
+<div class="container">
+    <div class="row d-flex justify-content-center align-items-center card_container">
+     <!-- md->medium,sm->small,lg->large,cl-1=8.33%width,col-12=100%  -->
+         <div class="col-md-12 col-lg-6">
+            <div class="card shadow">
+                <div class="card-header bg-dark">
+                 <h3 class="text-center text-light">Add New User</h3>
+                </div>
+             <div class="card-body p-4">
+                 <form action="/add" method="post" id="add-form" enctype="multipart/form-data">
+                 <div class="form-group mt-3">
+                     <label for="name" class="form-label">Name</label>
+                     <input type="text" id="title"  name="name" class="form-control form-control-lg" placeholder="Enter Name" required/>
+                 </div>
+                 <div class="form-group mt-3">
+                    <label for="email" class="form-label">Email ID</label>
+                    <input type="email" id="title"  name="email" class="form-control form-control-lg" placeholder="Enter valid email" required/>
+                </div>
+                <div class="form-group mt-3">
+                    <label for="phone" class="form-label">Phone</label>
+                    <input type="tel"  name="phone" class="form-control form-control-lg" placeholder="Enter Contact Number" required/>
+                </div>
+                 <div class="form-group mt-3">
+                     <label for="image" class="form-label">Select Image</label>
+                     <input type="file"  name="image" class="form-control form-control-lg" placeholder="Upload Your Image" required/>
+                 </div>
+                 <div class="form-group mt-3 text-center d-grid">
+                     <input type="submit"  name="submit" value="Add User" class="btn btn-dark btn-lg"/>
+                 </div>
+                </form>
+             </div>
+         </div>
+         </div>
+    </div>
+ </div>
+<%- include('layout/footer') %>
